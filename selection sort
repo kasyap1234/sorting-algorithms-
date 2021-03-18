@@ -1,0 +1,11 @@
+
+def selection_sort(thesequence):
+    n=len(thesequence)-1
+    for i in range(n):
+        minvalueindex=i
+        for j in range(i+1,n):
+            if thesequence[j]<thesequence[minvalueindex]:
+                minvalueindex=j 
+    if minvalueindex!=i:
+        thesequence[minvalueindex],thesequence[i]=thesequence[i],thesequence[minvalueindex]
+    print(thesequence)
