@@ -1,0 +1,11 @@
+def insertionsort(seq):
+	for index in range(1,len(seq)):
+		value=seq[index]
+		i=index-1
+		while i>=0:
+			if value<seq[i]:
+				seq[i+1]=seq[i]
+				seq[i]=value
+	    i=i -1 
+	return seq 
+print(insertionsort(seq))
