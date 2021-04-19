@@ -1,0 +1,15 @@
+def quicksort(sequence):
+    n=len(sequence)
+    if n==1:
+        return sequence
+    else:
+        pivot=sequence.pop(0)
+        less=[]
+        more=[]
+        #two different arrays for numbers smaller and greater than pivot respectively.
+        for i in sequence:
+            if i>pivot:
+                less.append(i)
+            else:
+                more.append(i)
+    return quicksort(less)+ [pivot] + quicksort(more)
